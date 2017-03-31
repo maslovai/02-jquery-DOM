@@ -6,8 +6,9 @@ function Article (opts) {
   // TODO: Use the JS object passed in to complete this constructor function:
   // Save ALL the properties of `opts` into `this`
   // lots of this.someProperty = opts.property
+  
 }
-
+console.log(articles);
 Article.prototype.toHtml = function() {
   var $newArticle = $('article.template').clone();
   /* TODO: This cloned article is no longer a template,
