@@ -6,11 +6,7 @@ function Article (opts) {
   // TODO: Use the JS object passed in to complete this constructor function:
   // Save ALL the properties of `opts` into `this`
   // lots of this.someProperty = opts.property
-<<<<<<< HEAD
-  
-}
-console.log(articles);
-=======
+
   this.title = opts.title;
   this.category = opts.category;
   this.author = opts.author;
@@ -19,8 +15,6 @@ console.log(articles);
   this.body = opts.body;
 }
 
-
->>>>>>> b59f5e47eed4db32abd8ba67d48390b3472f976f
 Article.prototype.toHtml = function() {
   var $newArticle = $('article.template').clone();
   /* TODO: This cloned article is no longer a template,
