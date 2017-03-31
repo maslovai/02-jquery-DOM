@@ -39,14 +39,17 @@ Article.prototype.toHtml = function() {
 
     // lots of $newArticle.find...  (look at jQuery $.find docs)
 
-console.log($newArticle);
+  $newArticle.find('a').html(this.author);
+  $newArticle.find('h1').html(this.title);
+  $newArticle.find('url').html(this.authorURL);
+  $newArticle.find ( 'section').html(this.body);
+  console.log($newArticle);
 
   // Display the date as a relative number of 'days ago'
   $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
   $newArticle.append('<hr>');
   return $newArticle;
 };
-
 rawData.sort(function(a,b) {
   // REVIEW: Take a look at this sort method; This may be the first time we've seen it.
   return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
